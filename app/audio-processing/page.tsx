@@ -4,10 +4,10 @@ import { useState, ChangeEvent, FormEvent } from 'react';
 
 export default function Home() {
     const [file, setFile] = useState<File | null>(null);
-    const [fileName, setFileName] = useState<string>(''); // State for the file name
+    const [fileName, setFileName] = useState<string>('');
     const [message, setMessage] = useState<string>('');
-    const [downloadUrl, setDownloadUrl] = useState<string>(''); // State for the download URL
-    const [isLoading, setIsLoading] = useState<boolean>(false); // State for loading
+    const [downloadUrl, setDownloadUrl] = useState<string>('');
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
         if (event.target.files) {
