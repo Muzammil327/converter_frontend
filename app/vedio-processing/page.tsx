@@ -26,6 +26,7 @@ export default function Home() {
         setIsLoading(true); // Set loading to true
 
         try {
+            console.log(process.env.BACKEND_URL)
             const response = await fetch(`${process.env.BACKEND_URL}merge/videos`, {
                 method: 'POST',
                 body: formData,
